@@ -2,9 +2,7 @@
 # BCA - KMCUAF
 # 09-04-2020 :: 19:15
 import os
-location = {'7':' ', '8':' ', '9':' ',
-            '4':' ', '5':' ', '6':' ',
-            '1':' ', '2':' ', '3':' '}
+location = {f'{key}' : ' ' for key in range(10)}
  
 board_keys=[]
 for key in location:
