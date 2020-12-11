@@ -18,10 +18,7 @@ def board(locations):
     print(f"{locations['1']:^3} | {locations['2']:^3} | {locations['3']:^3}")
 
 def CheckLocation(position):
-    if location[position] == ' ':
-        return True
-    else:
-        return False
+    return True if location[position] == ' ' else False
 
 def status(player):
     print("\n+---------------------+")
@@ -30,10 +27,8 @@ def status(player):
 
 def restartGame(regame):
     ''' On the Game Running time ( Mid in Game ) You want to restart than type the "r" or "R" '''
-    if regame == 'r' or regame == 'R':
-        return True
-    else:
-        return False
+    return True if regame == 'r' or regame == 'R' else False
+      
         
 def mainGameCode():
     turn = 'X'; restart = False
@@ -62,10 +57,7 @@ def mainGameCode():
                     print("+--------------------+")
                     break
                 # Here change the Player one by one
-                if turn =='X': 
-                    turn = 'O'
-                else:
-                    turn = 'X'
+                turn = 'O' if turn == 'X' else 'X'
             else:
                     os.system('cls')
                     print('\n-----------------')
